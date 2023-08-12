@@ -1,7 +1,7 @@
 # ArceOS 最新进展
 
 ## ArceOS Core 
-齐呈祥：在ArceOS上支持了lwip网络协议栈  
+齐呈祥：在ArceOS上支持了10Gb NIC  
 * 讨论组：<https://github.com/orgs/rcore-os/discussions/27#discussioncomment-6271401>  
 * 代码仓库：<https://github.com/KuangjuX/arceos>
 
