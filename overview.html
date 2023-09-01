@@ -1,26 +1,38 @@
 <html>
   <body>
-    Here is one mermaid diagram:
+    <h2>ArceOS 组件化操作系统:</h2>
     <pre class="mermaid">
             graph TD 
             App1[<b>UDPServer</b>\n吴大帅] --> ArceOS[<span style="font-weight: bold;font-size: 24px;">ArceOS Core</span>\n贾越凯]
-            App2[ROSRust\n苏纪元] --> ArceOS[<span style="font-weight: bold;font-size: 24px;">ArceOS Core</span>\n贾越凯]
-            App3[RustPython\n李明] --> ArceOS[<span style="font-weight: bold;font-size: 24px;">ArceOS Core</span>\n贾越凯]
+            App2[<b>ROSRust</b>\n苏纪元] --> ArceOS[<span style="font-weight: bold;font-size: 24px;">ArceOS Core</span>\n贾越凯]
+            App3[<b>KCF目标追踪</b>\n李明] --> ArceOS[<span style="font-weight: bold;font-size: 24px;">ArceOS Core</span>\n贾越凯]
 
-            ArceOS --> Driver[网卡驱动\n萧络元]
+            ArceOS --> Driver[<b>网卡驱动</b>\n萧络元]
             Driver --> Driver1[华山派网卡驱动\n陈乐]
             Driver --> Driver2[荔枝派网卡驱动\n萧络元]
 
-            ArceOS --> MacroKernel[宏内核\n徐启航]
-            ArceOS --> Std支持[标准库支持\n石磊]
+            ArceOS --> MacroKernel[<b>宏内核</b>\n徐启航]
+            ArceOS --> Std[<b>标准库支持</b>\n石磊]
+    </pre>
 
-            Community-Distribution[<span style="font-weight: bold;font-size: 24px;">社区发行版</span>] --> ChenlongOS[辰龙操作系统社区\n何家胜]
-            Community-Distribution[<span style="font-weight: bold;font-size: 24px;">社区发行版</span>] --> CICVOS[CICVOS操作系统社区\n刘志坤]
-            Community-Distribution[<span style="font-weight: bold;font-size: 24px;">社区发行版</span>] --> SyswonderOS[矽望泛在操作系统社区\n曹东刚]
-            ChenlongOS --> COS1[x86\n石振兴]
-            ChenlongOS --> COS2[ARM\n唐洪雨]
-            ChenlongOS --> COS3[RISC-V\n张轩铬]
-            ChenlongOS --> COS4[Loongson\n翟鹏飞]
+    <h2>Hypervisor 虚拟化:</h2>
+    <pre class="mermaid">
+      graph TD
+      Hypervisor[<span style="font-weight: bold;font-size: 24px;">Hypervisor</span>] --> x86[x86/PC机\n贾越凯]
+      Hypervisor[<span style="font-weight: bold;font-size: 24px;">Hypervisor</span>] --> ARM[ARM/树莓派\n丁绍峰]
+      Hypervisor[<span style="font-weight: bold;font-size: 24px;">Hypervisor</span>] --> RISC-V[RISC-V/Qemu\n齐呈祥]
+    </pre>
+
+    <h2>社区发行版:</h2>
+    <pre class="mermaid">
+      graph TD
+      Community-Distribution[<span style="font-weight: bold;font-size: 24px;">社区发行版</span>] --> ChenlongOS[辰龙操作系统社区\n何家胜]
+      Community-Distribution[<span style="font-weight: bold;font-size: 24px;">社区发行版</span>] --> CICVOS[CICVOS操作系统社区\n刘志坤]
+      Community-Distribution[<span style="font-weight: bold;font-size: 24px;">社区发行版</span>] --> SyswonderOS[矽望泛在操作系统社区\n曹东刚]
+      ChenlongOS --> COS1[x86\n石振兴]
+      ChenlongOS --> COS2[ARM\n唐洪雨]
+      ChenlongOS --> COS3[RISC-V\n张轩铬]
+      ChenlongOS --> COS4[Loongson\n翟鹏飞]
     </pre>
 
     <script type="module">
