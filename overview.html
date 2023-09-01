@@ -3,19 +3,25 @@
     Here is one mermaid diagram:
     <pre class="mermaid">
             graph TD 
-            A1[UDPServer\n吴大帅] --> B[ArceOS Core\n贾越凯] 
-            A2[ROSRust\n苏纪元] --> B[ArceOS Core\n贾越凯] 
-            A3[RustPython\n李明] --> B[ArceOS Core\n贾越凯] 
-            B --> K[社区发行版\n何家胜]
-            K --> K1[x86\n石振兴]
-            K --> K2[ARM\n唐洪雨]
-            K --> K3[RISC-V\n张轩铬]
-            K --> K4[Loongson\n翟鹏飞]
-            B --> D[网卡驱动\n萧络元]
-            D --> D1[华山派网卡驱动\n陈乐] 
-            D --> D2[荔枝派网卡驱动\n萧络元]
-    </pre>
+            App1[<b>UDPServer</b>\n吴大帅] --> ArceOS[<span style="font-weight: bold;font-size: 24px;">ArceOS Core</span>\n贾越凯]
+            App2[ROSRust\n苏纪元] --> ArceOS[<span style="font-weight: bold;font-size: 24px;">ArceOS Core</span>\n贾越凯]
+            App3[RustPython\n李明] --> ArceOS[<span style="font-weight: bold;font-size: 24px;">ArceOS Core</span>\n贾越凯]
 
+            ArceOS --> Driver[网卡驱动\n萧络元]
+            Driver --> Driver1[华山派网卡驱动\n陈乐]
+            Driver --> Driver2[荔枝派网卡驱动\n萧络元]
+
+            ArceOS --> MacroKernel[宏内核\n徐启航]
+            ArceOS --> Std支持[标准库支持\n石磊]
+
+            Community-Distribution[<span style="font-weight: bold;font-size: 24px;">社区发行版</span>] --> ChenlongOS[辰龙操作系统社区\n何家胜]
+            Community-Distribution[<span style="font-weight: bold;font-size: 24px;">社区发行版</span>] --> CICVOS[CICVOS操作系统社区\n刘志坤]
+            Community-Distribution[<span style="font-weight: bold;font-size: 24px;">社区发行版</span>] --> SyswonderOS[矽望泛在操作系统社区\n曹东刚]
+            ChenlongOS --> COS1[x86\n石振兴]
+            ChenlongOS --> COS2[ARM\n唐洪雨]
+            ChenlongOS --> COS3[RISC-V\n张轩铬]
+            ChenlongOS --> COS4[Loongson\n翟鹏飞]
+    </pre>
 
     <script type="module">
       import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs';
