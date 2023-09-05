@@ -7,21 +7,26 @@
       dds --> linux_apps
       opencv --> linux_apps
       AI-model --> linux_apps
-
+      busybox/lua/lmbench\niozone/iperf\nlibc-bench/libc-test\nnetperf/time-test\n郑友捷
+      syzkaller\n许善朴 --> linux_apps
+      busybox/lua/lmbench\niozone/iperf\nlibc-bench/libc-test\nnetperf/time-test\n郑友捷 --> linux_apps
       dora --> Rust_apps
       tokio --> Rust_apps
+      redis --> C_apps</Canvas>
 
-      Rust_apps --> std\n石磊
-      std\n石磊 --> unikernel\n贾跃凯
+      C_apps --> libc\n晏巨广
+      Rust_apps --> rust_std\n石磊
+      libc\n晏巨广 --> unikernel\n贾跃凯/石磊
+      rust_std\n石磊 --> unikernel\n贾跃凯/石磊
       linux_apps --> monolithickernel\n闭浩扬
-      unikernel\n贾跃凯 --> hypervisor\n黄旺
-      monolithickernel\n闭浩扬 --> hypervisor\n黄旺
+
 
       drivers\n肖络元
 
-      monolithickernel\n闭浩扬 --> drivers\n肖络元
-      unikernel\n贾跃凯 --> drivers\n肖络元
-      hypervisor\n黄旺 --> drivers\n肖络元
+      monolithickernel\n闭浩扬 -->  unikernel\n贾跃凯/石磊
+
+      drivers\n肖络元 --> unikernel\n贾跃凯/石磊 
+      hypervisor\n黄旺 --> unikernel\n贾跃凯/石磊
     </pre>
 
     <h2>ArceOS 团队分组:</h2>
@@ -34,12 +39,19 @@
       华山派网卡\n朱懿 --> 华山派网卡\n周毅/谢凯至/彭伟浩/徐堃元/邵志航
 
       黄旺 --> hypervisor_arm\n黄旺
+      黄旺 --> hypervisor_arm\n丁绍峰
+      黄旺 --> hypervisor_riscv\n齐呈祥
       黄旺 --> hypervisor_x86\n苏明贤
       黄旺 --> hypervisor_x86\n陈伟宁
+      黄旺 --> hypervisor_x86\n贾跃凯
 
-      贾越凯 --> rust_std\n石磊
-      贾越凯 --> unikernel\n胡柯洋
-      贾越凯 --> unikernel_core\n贾跃凯
+      贾越凯/石磊 --> rust_std\n石磊
+      贾越凯/石磊 --> unikernel\n胡柯洋
+      贾越凯/石磊 --> unikernel\n杨金博
+      贾越凯/石磊 --> unikernel_core\n贾跃凯
+      贾越凯/石磊 --> ARM树莓派\n袁世平
+      贾越凯/石磊 --> 组件依赖关系\n陈庭潤
+      贾越凯/石磊 --> 组件功能差异分析\n翟鹏飞/柴小虎
 
       闭浩扬 --> monolithic_arch\n闭浩扬
       闭浩扬 --> linux_syscall\n郑友捷
@@ -56,11 +68,11 @@
       App3[<b>KCF目标追踪</b>\n李明] --> ArceOS[<span style="font-weight: bold;font-size: 24px;">ArceOS Core</span>\n贾越凯]
 
       ArceOS --> Driver[<b>网卡驱动</b>\n萧络元]
-      Driver --> Driver1[华山派网卡驱动\n陈乐]
+      Driver --> Driver1[星光二代网卡驱动\n陈乐]
       Driver --> Driver2[荔枝派网卡驱动\n萧络元]
-
-      ArceOS --> MacroKernel[<b>宏内核</b>\n徐启航]
-      ArceOS --> Std[<b>标准库支持</b>\n石磊]
+      Driver --> Driver3[华山派网卡\n朱懿]
+      ArceOS --> MacroKernel[<b>宏内核</b>\n闭浩扬]
+      ArceOS --> Std[<b>Rust标准库支持</b>\n石磊]
     </pre>
 
     <h2>Hypervisor 虚拟化:</h2>
