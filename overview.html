@@ -46,6 +46,21 @@
       闭浩扬 --> syzkaller\n许善朴
     </pre>
 
+    <h2>ArceOS 发行版:</h2>
+    <pre class="mermaid">
+      graph TD
+      Community-Distribution[<span style="font-weight: bold;font-size: 24px;">社区发行版</span>] --> ChenlongOS[辰龙操作系统社区\n何家胜]
+      ChenlongOS --> COS1[ARM_树莓派\n傅新元]
+      COS1 --> APP1[dora-rs\n唐洪雨]
+      COS1 --> HV1[hypervisor_linux\n胡友豪]
+      ChenlongOS --> COS2[RISC-V_华山派\n张轩铬/彭伟浩]
+      COS2 --> APP1[dora-rs\n唐洪雨]
+      COS2 --> HV1[hypervisor_linux\n胡友豪]
+      ChenlongOS --> COS3[RISC-V_荔枝派\n王哲威]
+      ChenlongOS --> COS4[x86\n石振兴]
+      ChenlongOS --> COS5[Loongson_龙芯\n翟鹏飞]
+    </pre>
+
     <hr>
 
     <h2>ArceOS 组件化操作系统:</h2>
@@ -71,18 +86,6 @@
       Hypervisor[<span style="font-weight: bold;font-size: 24px;">Hypervisor</span>] --> RISC-V[RISC-V/Qemu\n齐呈祥]
 
       RISC-V[RISC-V/Qemu\n齐呈祥] --> |<a href="https://github.com/KuangjuX/arceos">hypercraft</a>| hypercraft[hypercraft]
-    </pre>
-
-    <h2>社区发行版:</h2>
-    <pre class="mermaid">
-      graph TD
-      Community-Distribution[<span style="font-weight: bold;font-size: 24px;">社区发行版</span>] --> ChenlongOS[辰龙操作系统社区\n何家胜]
-      Community-Distribution[<span style="font-weight: bold;font-size: 24px;">社区发行版</span>] --> CICVOS[CICVOS操作系统社区\n刘志坤]
-      Community-Distribution[<span style="font-weight: bold;font-size: 24px;">社区发行版</span>] --> SyswonderOS[矽望泛在操作系统社区\n曹东刚]
-      ChenlongOS --> COS1[x86\n石振兴]
-      ChenlongOS --> COS2[ARM\n唐洪雨]
-      ChenlongOS --> COS3[RISC-V\n张轩铬]
-      ChenlongOS --> COS4[Loongson\n翟鹏飞]
     </pre>
 
     <script type="module">
