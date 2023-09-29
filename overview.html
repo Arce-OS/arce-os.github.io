@@ -1,4 +1,7 @@
 <html>
+  <head>
+    <script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid-d733041c.js"></script>
+  </head>
   <body>
     <h2>ArceOS Overview:</h2>
     <pre class="mermaid">
@@ -62,15 +65,22 @@
     <pre class="mermaid">
       graph TD
       Community-Distribution[<span style="font-weight: bold;font-size: 24px;">社区发行版</span>] --> ChenlongOS[辰龙操作系统社区\n何家胜]
-      ChenlongOS --> COS1[ARM_树莓派\n傅新元]
-      COS1 --> APP1[dora-rs\n唐洪雨]
-      COS1 --> HV1[hypervisor_linux\n胡友豪]
-      ChenlongOS --> COS2[RISC-V_华山派\n张轩铬/彭伟浩]
-      COS2 --> APP1[dora-rs\n唐洪雨]
-      COS2 --> HV1[hypervisor_linux\n胡友豪]
-      ChenlongOS --> COS3[RISC-V_荔枝派\n王哲威]
-      ChenlongOS --> COS4[x86\n石振兴]
-      ChenlongOS --> COS5[Loongson_龙芯\n翟鹏飞]
+      ChenlongOS --> COS1[ARM_开发板\n李明]
+      ChenlongOS --> COS2[RISC-V_开发板适配\n]
+      ChenlongOS --> COS3[x86_真机启动\n何家胜]
+      ChenlongOS --> COS4[Loongson_龙芯\n陈林峰]
+      COS1 --> ARM_BRD1[ARM_树莓派\n]
+      COS1 --> ARM_BRD2[ARM_飞腾派\n翟开源]
+      ARM_BRD1 --> ARM_APP1[rosrust\n苏纪元]
+      ARM_BRD1 --> ARM_APP2[rosmaster_智能小车\n傅新元/张江鹏]
+      COS2 --> COS2.1[RISC-V_荔枝派\n肖络元]
+      COS2 --> COS2.2[RISC-V_华山派\n朱懿]
+      COS2 --> COS2.3[RISC-V_星光二代\n陈乐]
+      COS3 --> X86_APP1[VGA显示器输出\n李宇]
+      COS3 --> X86_APP2[U盘启动\n苏纪元/姜坤/郑友捷]
+      COS3 --> X86_APP3[Redox真机验证\n李明/石振兴]
+      ARM_APP2 --> APP5[dora-rs_移植支持\n]
+
     </pre>
 
     <hr>
