@@ -1,0 +1,51 @@
+# The URL the site will be built for
+base_url = "https://arceos.cn"
+
+# Whether to automatically compile all Sass files in the sass directory
+compile_sass = true
+
+# Whether to do syntax highlighting
+# Theme can be customised by setting the `highlight_theme` variable to a theme supported by Zola
+highlight_code = true
+
+# Whether to build a search index to be used later on by a JavaScript library
+build_search_index = true
+
+title = "ArceOS"
+description = ""
+
+minify_html = false
+
+[extra]
+githubUrl = "https://github.com/Arce-OS/arce-os.github.io"
+navbar = [
+  # { name = "Home", url = "/" },
+  # { name = "News", url = "/news" },
+  # { name = "Zulip", url = "https://zulip.rust-edu.org" },
+  # { name = "Resources", url = "/resources" },
+  { name = "Github", url = "https://github.com/Arce-OS/arce-os.github.io" },
+]
+
+menus = [
+  { label = "设计目标", path = '#nav1' },
+  { label = "现有功能", path = '#nav2' },
+  { label = "整体架构", path = '#nav3' },
+  { label = "组件设计", path = '#nav4' },
+  { label = "代码统计", path = '#nav5' },
+  { label = "功能演示", path = '#nav6' },
+  { label = "最新进展", path = '#nav7' },
+]
+
+external = [
+  { name = "Rust Language Website", url = "https://rust-lang.org" },
+  { name = "Official Rust Book", url = "https://doc.rust-lang.org/book/" },
+]
+
+footers = [
+  { label = "组织主页", path = 'https://github.com/arceos-org/' },
+  { label = "技术文档", path = 'https://rcore-os.cn/arceos-tutorial-book/' },
+  { label = "问答论坛", path = 'https://qa.arceos.cn/' },
+  { label = "辰龙发行版", path = 'https://chenlongos.com/' },
+  { label = "项目仓库", path = 'https://github.com/arceos-org/arceos' },
+  { label = "联系我们", path = 'mailto:hello@arceos.cn' },
+]

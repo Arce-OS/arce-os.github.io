@@ -50,4 +50,3 @@ loongarch架构下页表已经支持
 
 Github 相关讨论
 * 讨论组：<https://github.com/orgs/rcore-os/discussions/20>
-
