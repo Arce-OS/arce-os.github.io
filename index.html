@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link href="https://arceos.cn/style.css" rel="stylesheet" />
+    <link href="https://arceos.cn/home.css" rel="stylesheet" />
+
+    
+
+    <title>Home - ArceOS</title>
+</head>
+
+<body>
+    <nav class="navbar" role="navigation" aria-label="main navigation">
+        <div class="navbar-brand">
+            <a class="navbar-item" href="https:&#x2F;&#x2F;arceos.cn">
+                <!-- <img class="navbar-logo" src="https://ssl.cdn.maodouketang.com/Fpkgonzaw5GTUFa0Bfvd_ZlO5yq1"
+                    alt="ArceOS" /> -->
+                <a role="button" class="navbar-burger" data-target="navMenu" aria-label="menu" aria-expanded="false">
+                    <span aria-hidden="true"></span>
+                    <span aria-hidden="true"></span>
+                    <span aria-hidden="true"></span>
+                </a>
+            </a>
+        </div>
+        <div class="navbar-menu" id="navMenu">
+            <div class="navbar-end has-text-centered">
+                
+                <a class="navbar-item has-text-weight-semibold"
+                    href="https:&#x2F;&#x2F;github.com&#x2F;Arce-OS&#x2F;arce-os.github.io">
+                    view on github
+                </a>
+                
+            </div>
+        </div>
+    </nav>
+
+    <div class="main-content">
+        <div class="column">
+            <section class="section">
+                <div class="container">
+                    
+<div class="has-text-centered pb-6">
+    <h1 class="title is-1">ArceOS</h1>
+    <!-- <p class="subtitle is-4">Rust education in academia (and beyond)</p> -->
+    <ul class="home-menus">
+        
+        <a class="menu-item " href="#nav1">
+            设计目标
+        </a>
+        
+        <a class="menu-item " href="#nav2">
+            现有功能
+        </a>
+        
+        <a class="menu-item " href="#nav3">
+            整体架构
+        </a>
+        
+        <a class="menu-item " href="#nav4">
+            组件设计
+        </a>
+        
+        <a class="menu-item " href="#nav5">
+            代码统计
+        </a>
+        
+        <a class="menu-item " href="#nav6">
+            功能演示
+        </a>
+        
+        <a class="menu-item " href="#nav7">
+            最新进展
+        </a>
+        
+    </ul>
+</div>
+<div id="main-content" class="content">
+    <div class='index-container'>
+<div id='nav1' class='contnt-block'>
+<h2 id="zu-jian-hua-os-de-she-ji-mu-biao">组件化 OS 的设计目标</h2>
+<h4 id="1-yi-yu-ding-zhi">1. 易于定制</h4>
+<ul>
+<li>适应硬件与应用需求</li>
+<li>高安全、高性能、专用化</li>
+</ul>
+<h4 id="2-yi-yu-fu-yong">2. 易于复用</h4>
+<ul>
+<li>Rust crate</li>
+<li>Rust for Linux</li>
+</ul>
+<h4 id="3-yi-yu-kai-fa">3. 易于开发</h4>
+<ul>
+<li>层次化组件隐藏底层细节</li>
+<li>像开发应用一样开发 OS</li>
+</ul>
+</div>
+<div id='nav2' class='contnt-block'>
+<h2 id="zu-jian-hua-os-de-xian-you-gong-neng">组件化 OS 的现有功能</h2>
+<h4 id="1-duo-jia-gou-x86-64-aarch64-riscv64">1. 多架构: x86 64/aarch64/riscv64</h4>
+<h4 id="2-duo-chong-diao-du-suan-fa-fifo-round-robin-cfs">2. 多种调度算法:  FIFO、Round-robin、CFS</h4>
+<h4 id="3-virtlo-net-blk-gpu-qu-dong">3. VirtlO net/blk/gpu 驱动</h4>
+<h4 id="4-ji-yu-smoltcp-de-wang-luo-zhan">4. 基于 smoltcp 的网络栈</h4>
+<h4 id="5-fat32-wen-jian-xi-tong">5. FAT32 文件系统</h4>
+<h4 id="6-rust-c-yu-yan-ying-yong-cheng-xu">6. Rust / C 语言应用程序</h4>
+</div>
+<div id='nav3' class='contnt-block'>
+<h2 id="arceos-zheng-ti-jia-gou">ArceOS 整体架构</h2>
+<!-- ![](https://ssl.cdn.maodouketang.com/FmfBCYTt1qnkAC88QTI9nXKdFYAp) -->
+<p><img src='https://ssl.cdn.maodouketang.com/FmfBCYTt1qnkAC88QTI9nXKdFYAp' width="30%"></img></p>
+</div>
+<div id='nav4'class='contnt-block'>
+<h2 id="arceos-zu-jian-she-ji">ArceOS 组件设计</h2>
+<h3 id="crates">crates</h3>
+<h4 id="1-yu-os-de-she-ji-wu-guan-de-gong-gong-zu-jian">1. 与 OS 的设计无关的公共组件</h4>
+<ul>
+<li>linked list</li>
+<li>page_table</li>
+<li>allocator</li>
+<li>scheduler</li>
+<li>drivers</li>
+<li>spinlock</li>
+</ul>
+<h3 id="modules">modules</h3>
+<h4 id="1-yu-os-de-she-ji-bi-jiao-ou-he-de-zu-jian">1. 与 OS 的设计比较耦合的组件</h4>
+<ul>
+<li>axruntime</li>
+<li>axtask</li>
+<li>axnet</li>
+<li>axsync</li>
+</ul>
+<h4 id="2-dui-crates-zu-jian-de-xuan-qu-yu-feng-zhuang">2. 对 crates 组件的选取与封装</h4>
+<ul>
+<li>axalloc</li>
+<li>axdriver</li>
+<li>axdisplay</li>
+</ul>
+</div>
+<div id='nav5' class='contnt-block'>
+<h2 id="zu-jian-hua-os-de-she-ji-mu-biao-1">组件化 OS 的设计目标</h2>
+<ol>
+<li>灵活的功能配置</li>
+<li>组件间相互调用</li>
+<li>应用自定义组件</li>
+<li>独立的单元测试</div>
+</li>
+</ol>
+<div id='nav6' class='contnt-block'>
+<h2 id="arceos-zui-xin-jin-zhan">ArceOS 最新进展</h2>
+<ol>
+<li>在ArceOS上支持了10Gb NIC</li>
+<li>在ArceOS上支持了lwip网络协议栈</li>
+<li>把tokio移植到rusty-hermit</li>
+<li>rosrust 可以运行 publisher-node</li>
+<li>树莓派运行 ArceOS 问题总结</div>
+</li>
+</ol>
+<div id='nav7' class='contnt-block'>
+<h2 id="arceos-wei-lai-zuo">ArceOS 未来⼯作</h2>
+<h4 id="zheng-zai-jin-xing-de-gong-zuo">正在进行的工作</h4>
+<ul>
+<li>硬件：树莓派 4B</li>
+<li>调度算法：多核多队列/实时调度</li>
+<li>内存分配算法：mimalloc/TLSF</li>
+<li>⽹络栈：lwip</li>
+<li>⽂件系统：ext2/ext3</li>
+<li>⽤户库：Rust std 移植</li>
+<li>⽀持复杂应⽤：Redis</li>
+<li>异步 I/O</li>
+</ul>
+<h4 id="ji-hua-shi-xian-de-gong-neng">计划实现的功能</h4>
+<ul>
+<li>硬件：更多 RISC-V/ARM 开发版</li>
+<li>真实驱动：e1000/ixgbe ⽹卡</li>
+<li>多种内核形态：宏内核/微内核</li>
+<li>系统兼容层：兼容 Linux ABI</li>
+<li>⽀持复杂应⽤：NGINX/tokio</li>
+</ul>
+</div>
+</div>
+</div>
+
+                </div>
+            </section>
+        </div>
+    </div>
+
+    <footer class="footer-container">
+        <!-- <div class="columns is-centered mb-5">
+            <div class="column is-narrow mx-6">
+                <h4 class="title is-5 mb-2">Navigation</h4>
+
+                <ul>
+                    
+                    <li><a href="https:&#x2F;&#x2F;github.com&#x2F;Arce-OS&#x2F;arce-os.github.io">view on github</a></li>
+                    
+                </ul>
+            </div>
+            <div class="column is-narrow mx-6">
+                <h4 class="title is-5 mb-2">Useful links</h4>
+                <ul>
+                    
+                    <li><a href="https:&#x2F;&#x2F;rust-lang.org" target="_blank">Rust Language Website</a></li>
+                    
+                    <li><a href="https:&#x2F;&#x2F;doc.rust-lang.org&#x2F;book&#x2F;" target="_blank">Official Rust Book</a></li>
+                    
+                </ul>
+            </div>
+        </div> -->
+        <div class="content">
+            <div class="title">
+                <p class="main">ArceOS</p>
+                <p class="desc">组件化操作系统</p>
+            </div>
+            <ul class="footer-links">
+                
+                <li><a href=https:&#x2F;&#x2F;github.com&#x2F;arceos-org&#x2F;>组织主页</a></li>
+                
+                <li><a href=https:&#x2F;&#x2F;rcore-os.cn&#x2F;arceos-tutorial-book&#x2F;>技术文档</a></li>
+                
+                <li><a href=https:&#x2F;&#x2F;qa.arceos.cn&#x2F;>问答论坛</a></li>
+                
+                <li><a href=https:&#x2F;&#x2F;chenlongos.com&#x2F;>辰龙发行版</a></li>
+                
+                <li><a href=https:&#x2F;&#x2F;github.com&#x2F;arceos-org&#x2F;arceos>项目仓库</a></li>
+                
+                <li><a href=mailto:hello@arceos.cn>联系我们</a></li>
+                
+            </ul>
+        </div>
+        <div class="footer-notice">
+            <!-- <p class="is-size-6">
+                The content of this website is licensed <a href="https://creativecommons.org/share-your-work/public-domain/cc0/" target="_blank">CC0</a>.
+            </p> -->
+            <p class="is-size-6">Copyright © 2023 ArceOS.</a>
+            </p>
+        </div>
+    </footer>
+
+    <script src="https://arceos.cn/js/site.js"></script>
+</body>
+
+</html>
