@@ -23,7 +23,7 @@ navbar = [
   # { name = "News", url = "/news" },
   # { name = "Zulip", url = "https://zulip.rust-edu.org" },
   # { name = "Resources", url = "/resources" },
-  { name = "Github", url = "https://github.com/Arce-OS/arce-os.github.io" },
+  { name = "view on github", url = "https://github.com/Arce-OS/arce-os.github.io" },
 ]
 
 menus = [

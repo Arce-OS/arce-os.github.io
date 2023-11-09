@@ -23,7 +23,14 @@
     }
 }
 
-
+.main-content {
+    width: 100vw;
+    overflow-x: visible;
+    .column{
+        width: 100vw;
+        padding: 0;
+    }
+}
 
 .index-container {
     width: 100%;
@@ -62,7 +69,8 @@
                 display: flex;
                 justify-content: center;
             }
-            .desc{
+
+            .desc {
                 font-size: 18px;
                 font-weight: 30;
                 display: flex;
